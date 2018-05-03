@@ -1,0 +1,13 @@
+---
+# vars file for perfsonar-toolkit
+# Variables defined in this file have precedence over a lot of other places
+# This means they cannot be overwritten in inventory or playbook.
+# See http://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
+
+# List of perfSONAR services to check are running
+# TODO: How to handle services needed by the toolkit only like Cassandra?
+#perfsonar_services:
+
+# perfSONAR bundle to install
+perfsonar_bundle: perfsonar-toolkit
+
