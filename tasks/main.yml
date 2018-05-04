@@ -5,6 +5,7 @@
   package:
     name: python-passlib
     state: latest
+  tags: [ 'ps::install' ]
 
 - name: Add the credentials to log to the perfSONAR web admin GUI
   htpasswd:
@@ -12,4 +13,6 @@
     name: "{{ perfsonar_web_user }}"
     password: "{{ perfsonar_web_passwd }}"
     state: present
+  tags: [ 'ps::config' ]
+
 

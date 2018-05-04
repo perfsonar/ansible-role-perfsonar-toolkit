@@ -5,6 +5,9 @@
 # See http://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable
 
 # List of perfSONAR services to check are running
-# TODO: How to handle services needed by the toolkit only like Cassandra?
-#perfsonar_services:
+perfsonar_toolkit_services:
+  - "{{ perfsonar_testpoint_services }}"
+  - cassandra
+  - perfsonar-lscachedaemon
+  - perfsonar-toolkit-config-daemon
 
