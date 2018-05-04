@@ -7,7 +7,7 @@
     state: latest
   tags: [ 'ps::install' ]
 
-- name: Add the credentials to log to the perfSONAR web admin GUI
+- name: Add the credentials to log in the perfSONAR web admin GUI
   htpasswd:
     path: /etc/perfsonar/toolkit/psadmin.htpasswd
     name: "{{ perfsonar_web_user }}"
