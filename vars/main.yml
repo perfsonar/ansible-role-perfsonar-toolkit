@@ -8,6 +8,3 @@
 # TODO: How to handle services needed by the toolkit only like Cassandra?
 #perfsonar_services:
 
-# perfSONAR bundle to install
-perfsonar_bundle: perfsonar-toolkit
-

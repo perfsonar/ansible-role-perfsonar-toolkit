@@ -53,5 +53,5 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
-  - perfsonar-testpoint
+  - { role: perfsonar-testpoint, perfsonar_bundle: perfsonar-toolkit }
 
