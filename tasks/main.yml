@@ -5,6 +5,7 @@
   package:
     name: python-passlib
     state: latest
+  when: perfsonar_web_passwd is not none
   tags: [ 'ps::install' ]
 
 - name: Add the credentials to log in the perfSONAR web admin GUI
@@ -13,6 +14,5 @@
     name: "{{ perfsonar_web_user }}"
     password: "{{ perfsonar_web_passwd }}"
     state: present
+  when: perfsonar_web_passwd is not none
   tags: [ 'ps::config' ]
-
-
