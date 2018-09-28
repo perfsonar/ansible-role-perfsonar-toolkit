@@ -3,5 +3,4 @@
 
 # Credentials to use to connect to the perfSONAR web admin GUI
 perfsonar_web_user: psadmin
-perfsonar_web_passwd: public
-
+perfsonar_web_passwd:
