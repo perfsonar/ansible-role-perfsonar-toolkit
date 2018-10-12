@@ -16,3 +16,6 @@
     state: present
   when: perfsonar_web_passwd is not none
   tags: [ 'ps::config' ]
+
+# TODO: check the webadmin is reachable and login works
+

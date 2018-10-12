@@ -29,7 +29,7 @@ galaxy_info:
     - performance
 
 dependencies:
-  - role: perfsonar-testpoint
+  - role: ansible-role-perfsonar-testpoint
     vars:
       perfsonar_bundle: perfsonar-toolkit
       perfsonar_services: "{{ perfsonar_toolkit_services }}"
