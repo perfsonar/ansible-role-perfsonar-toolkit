@@ -11,3 +11,7 @@ perfsonar_toolkit_services:
   - perfsonar-lscachedaemon
   - perfsonar-toolkit-config-daemon
 
+perfsonar_services: "{{ perfsonar_toolkit_services }}"
+perfsonar_bundle: perfsonar-toolkit
+perfsonar_optional_packages:
+  - python-passlib
