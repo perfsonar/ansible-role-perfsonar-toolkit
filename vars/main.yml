@@ -9,8 +9,12 @@ perfsonar_toolkit_services:
   - "{{ perfsonar_testpoint_services }}"
   - cassandra
   - perfsonar-lscachedaemon
-  - perfsonar-toolkit-config-daemon
 
+perfsonar_toolkit_os_specific_services:
+  - "{{ perfsonar_testpoint_os_specific_services }}"
+  - "{{ perfsonar_toolkit_config_daemon }}"
+
+perfsonar_os_specific_services: "{{ perfsonar_toolkit_os_specific_services }}"
 perfsonar_services: "{{ perfsonar_toolkit_services }}"
 perfsonar_bundle: perfsonar-toolkit
 perfsonar_optional_packages:
