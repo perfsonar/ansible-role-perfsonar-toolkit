@@ -5,3 +5,4 @@
 perfsonar_web_user: psadmin
 perfsonar_web_passwd:
 
+passlibpkg: "{{'python3-passlib' if ( ansible_facts['python_version'] | regex_search('^[0-9]+') | int > 2 ) else 'python-passlib'}}"

@@ -1,19 +1,11 @@
 ---
 # tasks file for perfsonar-toolkit
 
-- name: Need python-passlib to work with htpasswd module
+- name: Need python-passlib or python3-passlib  based on python version Ansible uses. Needed to work with htpasswd module
   tags: [ 'ps::config' ]
   package:
-    name: python-passlib
+    name: "{{ passlibpkg}}"
     state: latest
-  when: ansible_distribution is "CentOS" and ansible_distribution_major_version is "7"
-
-- name: Need python3-passlib to work with htpasswd module
-  tags: [ 'ps::config' ]
-  package:
-    name: python3-passlib
-    state: latest
-  when: ansible_distribution is not "CentOS" or ansible_distribution_major_version is not "7"
 
 - name: Add the credentials to log in the perfSONAR web admin GUI
   tags: [ 'ps::config' ]
